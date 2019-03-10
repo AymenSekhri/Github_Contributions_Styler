@@ -49,8 +49,13 @@ fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
 fd.write("565454")
 fd.close()
 os.system("git add .")
-            
-#print('git commit --message = "' + 'fake commit' + '" --date = "' + commit_date + '"')
+os.system('git commit --message="' + 'fake commit' + '" --date="' + commit_date + '"')
+
+
+fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
+fd.write("14865468")
+fd.close()
+os.system("git add .")
 os.system('git commit --message="' + 'fake commit' + '" --date="' + commit_date + '"')
 
 

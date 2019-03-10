@@ -43,18 +43,15 @@ os.system("git init")
 
 fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
 fd.close()
-for x in range(collab_matrix.shape[1]):
-    for y in range(collab_matrix.shape[0]):
-        collab_array = collab_matrix.tolist()
-        if collab_array[y][x] == '1':
-            commit_date = current_date.strftime("%d.%m.%Y")
-            fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
-            fd.write(str(x) + '  ' + str(y))
-            fd.close()
-            os.system("git add .")
-            #print('git commit --message = "' + 'fake commit' + '" --date = "' + commit_date + '"')
-            os.system('git commit --message="' + 'fake commit' + '" --date="' + commit_date + '"')
-        current_date = current_date + timedelta(days=1)
+
+commit_date = current_date.strftime("%d.%m.%Y")
+fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
+fd.write("Hello")
+fd.close()
+os.system("git add .")
+            
+#print('git commit --message = "' + 'fake commit' + '" --date = "' + commit_date + '"')
+os.system('git commit --message="' + 'fake commit' + '" --date="' + commit_date + '"')
 
 
 

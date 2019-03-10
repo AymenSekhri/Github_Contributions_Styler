@@ -36,7 +36,7 @@ start_date = end_date - timedelta(days=7*52-1)
 current_date = start_date
 
 
-path_to_repo = "C:\\Users\\0xCC\\Desktop\\FakeRepo"
+path_to_repo = "C:\\Users\\0xCC\\Desktop\\FakeRepo3"
 
 os.system("cd " + path_to_repo)
 os.system("git init")

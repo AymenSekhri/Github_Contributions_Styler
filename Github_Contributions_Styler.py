@@ -46,7 +46,7 @@ fd.close()
 
 commit_date = current_date.strftime("%d.%m.%Y")
 fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
-fd.write("Hello")
+fd.write("565454")
 fd.close()
 os.system("git add .")
             

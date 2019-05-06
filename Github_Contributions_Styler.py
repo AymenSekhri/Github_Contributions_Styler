@@ -41,7 +41,7 @@ path_to_repo = "C:\\Users\\0xCC\\Desktop\\FakeRepo"
 os.system("cd " + path_to_repo)
 os.system("git init")
 
-fd = open(path_to_repo + '\\FakeCommits', 'w')
+fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
 fd.close()
 for x in range(collab_matrix.shape[1]):
     for y in range(collab_matrix.shape[0]):

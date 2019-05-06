@@ -48,7 +48,7 @@ for x in range(collab_matrix.shape[1]):
         collab_array = collab_matrix.tolist()
         if collab_array[y][x] == '1':
             commit_date = current_date.strftime("%d.%m.%Y")
-            fd = open(path_to_repo + '\\FakeCommits', 'w')
+            fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
             fd.write(str(x) + '  ' + str(y))
             fd.close()
             os.system("git add .")

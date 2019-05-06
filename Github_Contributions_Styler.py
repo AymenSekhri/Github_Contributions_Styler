@@ -54,7 +54,6 @@ for x in range(collab_matrix.shape[1]):
             os.system("git add .")
             #print('git commit --message = "' + 'fake commit' + '" --date = "' + commit_date + '"')
             os.system('git commit --message="' + 'fake commit' + '" --date="' + commit_date + '"')
-            #comit here
         current_date = current_date + timedelta(days=1)
 
 

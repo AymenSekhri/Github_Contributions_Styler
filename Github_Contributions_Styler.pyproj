@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>36482de7-9a44-49a0-957c-8c54ac22a872</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Github_Contributions_Styler.py</StartupFile>
+    <StartupFile>github_contr.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,7 @@
     <Compile Include="character_set.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Github_Contributions_Styler.py" />
+    <Compile Include="github_contr.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

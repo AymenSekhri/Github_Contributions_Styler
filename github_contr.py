@@ -1,22 +1,30 @@
-import os
+import os,sys,subprocess
 import numpy  as np
 from character_set import *
 from datetime import datetime  
-import subprocess
 from datetime import timedelta  
-#os.system('git')
-#max = 52
+
 
 CHAR_WIDTH = 5
 CHAR_HIGHT = 7
 NUM_OF_COMMITS = 50
 
-message = "AYMEN";
-message = message.upper()
-
-if len(message.strip())>11:
-    print("String is too long")
+if len(sys.argv) != 3:
+    print("Invalid arguments.")
+    print("Example to use:\n github_contr.py 'C:\myRepo' 'MyMessage'")
     exit()
+path_to_repo = sys.argv[1]
+message = sys.argv[2];
+message = message.upper()
+if len(message.replace(" ", ""))>10:
+    print("String is too long.")
+    exit()
+if os.path.isdir(path_to_repo) == False:
+    print("Folder does not exist.")
+    exit()
+
+
+
 collab_matrix = np.zeros((CHAR_HIGHT,0))
 for x in message:
     if x == " ":
@@ -39,11 +47,9 @@ start_date = end_date - timedelta(days=7*52-1)
 current_date = start_date
 
 
-path_to_repo = "C:\\Users\\0xCC\\Desktop\\FakeRepo3"
-
 os.chdir(path_to_repo)
 subprocess.call("git init",stdout=subprocess.DEVNULL)
-fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
+fd = open(os.path.join(path_to_repo,'FakeCommits.txt'), 'w')
 fd.close()
 
 print("The Art takes time to accomplish, please wait...")
@@ -53,7 +59,7 @@ for x in range(collab_matrix.shape[1]):
         if collab_array[y][x] == '1':
             commit_date = current_date.strftime("%d.%m.%Y")
             for z in range(NUM_OF_COMMITS):
-                fd = open(path_to_repo + '\\FakeCommits.txt', 'w')
+                fd = open(os.path.join(path_to_repo,'FakeCommits.txt'), 'w')
                 fd.write(str(x) + '  ' + str(y) + ' ' + str(z))
                 fd.close()
                 subprocess.call("git add .",stdout=subprocess.DEVNULL)

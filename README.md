@@ -1,5 +1,6 @@
 # Github_Contributions_Styler
 This is probably the most useless repository ever! lol<br>
+The following picture will summarize its function.<br>
 ![alt text](https://github.com/AymenSekhri/Github_Contributions_Styler/blob/master/pic.PNG)
 ## How To use
 ```
